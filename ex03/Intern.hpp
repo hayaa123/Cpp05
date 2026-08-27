@@ -2,6 +2,16 @@
 # define INTERN_HPP
 
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
+enum FormType{
+    ShrubberyCreation,
+    RobotomyRequest,
+    PresidentialPardon,
+    Unknown
+};
 
 class Intern
 {
