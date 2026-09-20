@@ -19,38 +19,45 @@ Intern& Intern::operator=(const Intern &other)
     return (*this);
 }
 
-static FormType getType(std::string name)
+AForm *createShrubbery(std::string target)
 {
-    if(name == "shrubbery creation")
-        return (ShrubberyCreation);
-    if(name == "robotomy request")
-        return (RobotomyRequest);
-    if(name == "presedential Pardon")
-        return (PresidentialPardon);
-    return (Unknown);
+    return(new ShrubberyCreationForm(target));
+}
+
+AForm *createRobotomy(std::string target)
+{
+    return (new RobotomyRequestForm(target));
+}
+
+AForm *createPresidentialPardon(std::string target)
+{
+    return (new PresidentialPardonForm(target));
 }
 
 AForm *Intern::makeForm(std::string name, std::string target) const
 {
-    FormType type;
-    AForm   *form;
-    type = getType(name);
+    t_form_info forms_info[] = {
+        {"shrubbery creation", createShrubbery},
+        {"robotomy request", createRobotomy},
+        {"presidential pardon", createPresidentialPardon}
+    };
+    int form_size = 3;
 
-    switch (type)
+    for(int i=0; i < form_size; i++)
     {
-    case ShrubberyCreation:
-        form = new ShrubberyCreationForm(target);
-        break;
-    case RobotomyRequest:
-        form = new RobotomyRequestForm(target);
-        break;
-    case PresidentialPardon:
-        form = new PresidentialPardonForm(target);
-        break;
-    default:
-        std::cout << "The provided form name does not exist." << std::endl;
-        return (NULL);
+        if(name == forms_info[i].name)
+        {
+            std::cout << "Intern creates " << forms_info[i].name << std::endl;
+            return (forms_info[i].create(target));
+        }
     }
-    std::cout << "Intern creates " << form->getName() << std::endl;
-    return (form);
+    std::cout << "The provided name does not exist" << std::endl;
+    return (NULL);
+}
+
+std::ostream &operator<<(std::ostream &os, const Intern &obj)
+{
+    (void)obj;
+    os << "Intern :D";
+    return (os);
 }

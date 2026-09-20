@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   test.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/20 12:14:02 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:44:21 by hal-lawa         ###   ########.fr       */
+/*   Created: 2026/09/20 12:54:53 by hal-lawa          #+#    #+#             */
+/*   Updated: 2026/09/20 12:56:42 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SROBOTOMYREQUESTFORM_HPP
-# define SROBOTOMYREQUESTFORM_HPP
+#ifndef TEST_HPP
+# define TEST_HPP
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include <cstdlib>
 #include <ctime>
+#include "Intern.hpp"
 
-class RobotomyRequestForm: public AForm
-{
-    private:
-        std::string _target;
-    public:
-        RobotomyRequestForm();
-        RobotomyRequestForm(std::string target);
-        RobotomyRequestForm(const RobotomyRequestForm &other);
-        ~RobotomyRequestForm();
-        RobotomyRequestForm& operator=(const RobotomyRequestForm &other);
-        virtual void specificExecute() const;
-};
+void test_conical_form();
+void test_create_shrubbery_form();
+void test_create_robotomy_form();
+void test_create_presidential_form();
+void test_create_invalid_form();
 
 #endif

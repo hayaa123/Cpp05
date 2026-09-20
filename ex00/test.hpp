@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   test.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 17:46:05 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:57:17 by hal-lawa         ###   ########.fr       */
+/*   Created: 2026/09/20 12:13:24 by hal-lawa          #+#    #+#             */
+/*   Updated: 2026/09/20 12:13:25 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.hpp"
+#ifndef test_hpp
+#define test_hpp
 
-int main()
-{
-    std::srand(std::time(0));
-    test_conical_form();
-    std::cout << std::endl;
-    test_create_shrubbery_form();
-    std::cout << std::endl;
-    test_create_robotomy_form();
-    std::cout << std::endl;
-    test_create_presidential_form();
-    std::cout << std::endl;
-    test_create_invalid_form();
-    return (0);
-}
+#include "Bureaucrat.hpp"
+
+void test_conical_form();
+void test_grade_too_high();
+void test_grade_too_low();
+void test_inc_grade_normal();
+void test_inc_exception();
+void test_dec_grade_normal();
+void test_dec_exception();
+
+#endif

@@ -1,12 +1,12 @@
 NAME = Form
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp test.cpp
 OBJ = $(SRC:.cpp=.o) 
 
 all: $(NAME)
 
-$(NAME): $(OBJ) Bureaucrat.hpp Form.hpp
+$(NAME): $(OBJ) Bureaucrat.hpp Form.hpp test.hpp
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp

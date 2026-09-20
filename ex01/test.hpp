@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   test.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 17:46:05 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:57:17 by hal-lawa         ###   ########.fr       */
+/*   Created: 2026/09/20 12:13:37 by hal-lawa          #+#    #+#             */
+/*   Updated: 2026/09/20 12:13:38 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.hpp"
+#ifndef TEST_HPP
+#define TEST_HPP
 
-int main()
-{
-    std::srand(std::time(0));
-    test_conical_form();
-    std::cout << std::endl;
-    test_create_shrubbery_form();
-    std::cout << std::endl;
-    test_create_robotomy_form();
-    std::cout << std::endl;
-    test_create_presidential_form();
-    std::cout << std::endl;
-    test_create_invalid_form();
-    return (0);
-}
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
+
+void test_conical_form();
+void test_grade_too_high_is_sign();
+void test_grade_too_low_is_sign();
+void test_too_high_exec();
+void test_too_low_exec();
+void test_sign_form_equal();
+void test_sign_form_higher();
+void test_sign_form_execption();
+
+#endif
