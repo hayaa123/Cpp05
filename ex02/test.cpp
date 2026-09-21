@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:14:09 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:29:36 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 13:59:17 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -237,7 +237,7 @@ void test_execute_form_robotomy_not_signed()
     std::cout << "-------------------------------------" << std::endl;
     try
     {
-        Bureaucrat b("b", 50);
+        Bureaucrat b("b", 30);
         AForm *f = new RobotomyRequestForm("target");
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
@@ -323,7 +323,7 @@ void test_execute_form_presidential_not_signed()
     std::cout << "-------------------------------------" << std::endl;
     try
     {
-        Bureaucrat b("b", 10);
+        Bureaucrat b("b", 5);
         AForm *f = new PresidentialPardonForm("target");
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
@@ -334,4 +334,4 @@ void test_execute_form_presidential_not_signed()
     {
         std::cerr << e.what() << '\n';
     }
-}
+} 

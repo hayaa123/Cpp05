@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:13:46 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:13:47 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 13:53:46 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Bureaucrat
         std::string getName() const;
         int getGrade() const;
         void incBureaucrat();
-        void decBureaucrat();
+         void decBureaucrat();
         void signForm(AForm &form) const;
         void executeForm(AForm const & form) const;
         class GradeTooHighException : public std::exception
