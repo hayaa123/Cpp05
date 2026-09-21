@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:13:52 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:13:53 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 11:25:15 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-void PresidentialPardonForm::specificExecute() const
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
+    validateExecution(executor);
     std::cout << _target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
 

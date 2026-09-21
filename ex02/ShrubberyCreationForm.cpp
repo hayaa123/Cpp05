@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:14:04 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:14:05 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 11:24:44 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
     return (*this);
 }
 
-void ShrubberyCreationForm::specificExecute() const
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
+    validateExecution(executor);
     std::ofstream file((_target + "_shrubbery").c_str());
     if(!file.is_open())
         return;

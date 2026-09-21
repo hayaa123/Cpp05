@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:14:07 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:41:54 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 11:24:12 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ShrubberyCreationForm: public AForm
         ShrubberyCreationForm(const ShrubberyCreationForm &other);
         ~ShrubberyCreationForm();
         ShrubberyCreationForm& operator=(const ShrubberyCreationForm &other);
-        virtual void specificExecute() const;
+        void execute(Bureaucrat const & executor) const;
 };
 
 

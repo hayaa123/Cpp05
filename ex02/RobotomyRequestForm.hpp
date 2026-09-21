@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:14:02 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:44:21 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 11:26:08 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ class RobotomyRequestForm: public AForm
         RobotomyRequestForm(const RobotomyRequestForm &other);
         ~RobotomyRequestForm();
         RobotomyRequestForm& operator=(const RobotomyRequestForm &other);
-        virtual void specificExecute() const;
+        void execute(Bureaucrat const & executor) const;
+
 };
 
 #endif

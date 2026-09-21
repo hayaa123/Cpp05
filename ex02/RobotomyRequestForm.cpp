@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:13:56 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:13:57 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 11:35:33 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 
 RobotomyRequestForm::RobotomyRequestForm():
-AForm("roboto my request form", false, 72, 45)
+AForm("robotomy request form", false, 72, 45)
 {
 
 }
 RobotomyRequestForm::RobotomyRequestForm(std::string target):
-AForm("roboto my request form", false, 72, 45),
+AForm("robotomy request form", false, 72, 45),
 _target(target)
 {
 
@@ -34,9 +34,9 @@ RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-void RobotomyRequestForm::specificExecute() const
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-
+    validateExecution(executor);
     std::cout << "DZZZZZzZZzZZZZzZZZZZ" << std::endl;
     if(rand() % 2)
         std::cout << _target << " has been robotomized successfully." << std::endl; 

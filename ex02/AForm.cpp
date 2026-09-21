@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:13:40 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:13:41 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 11:22:54 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,13 +87,13 @@ void AForm::beSigned(const Bureaucrat &b)
     _isSigned = true;
 }
 
-void AForm::execute(Bureaucrat const & executor) const
+void AForm::validateExecution(Bureaucrat const & executor) const
 {
     if(getIsSigned() == false)
         throw AForm::FormNotSignedException();
     if(executor.getGrade() > getExecGrade())
         throw AForm::GradeTooLowException();
-    specificExecute();
+    return;
 }
 
 std::ostream &operator<<(std::ostream &os, const  AForm &obj)

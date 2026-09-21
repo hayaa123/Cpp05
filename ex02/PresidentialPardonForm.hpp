@@ -6,7 +6,7 @@
 /*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:13:54 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/20 12:13:55 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/21 11:26:11 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class PresidentialPardonForm: public AForm
         PresidentialPardonForm(const PresidentialPardonForm &other);
         ~PresidentialPardonForm();
         PresidentialPardonForm& operator=(const PresidentialPardonForm &other);
-        virtual void specificExecute() const;
+        void execute(Bureaucrat const & executor) const;
 };
 
 
