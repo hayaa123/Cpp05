@@ -26,7 +26,7 @@ void test_create_shrubbery_form()
         if(form != NULL)
         {
             std::cout << "Created form: " << std::endl << *form << std::endl;
-            free(form);
+            delete form;
         }
         else
         {
@@ -51,7 +51,7 @@ void test_create_robotomy_form()
         if(form != NULL)
         {
             std::cout << "Created form: " << std::endl << *form << std::endl;
-            free(form);
+            delete form;
         }
         else
         {
@@ -76,7 +76,7 @@ void test_create_presidential_form()
         if(form != NULL)
         {
             std::cout << "Created form: " << std::endl << *form << std::endl;
-            free(form);
+            delete form;
         }
         else
         {
@@ -101,7 +101,7 @@ void test_create_invalid_form()
         if(form != NULL)
         {
             std::cout << "Created form: " << std::endl << *form << std::endl;
-            free(form);
+            delete form;
         }
         else
         {

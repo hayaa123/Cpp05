@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hal-lawa <hal-lawa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hal-lawa <hal-lawa@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 12:14:09 by hal-lawa          #+#    #+#             */
-/*   Updated: 2026/09/21 13:59:17 by hal-lawa         ###   ########.fr       */
+/*   Updated: 2026/09/22 09:30:40 by hal-lawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void test_execute_form_shrubbery_equal()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -114,7 +114,7 @@ void test_execute_form_shrubbery_higher()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -136,7 +136,7 @@ void test_execute_form_shrubbery_lower()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -156,7 +156,7 @@ void test_execute_form_shrubbery_not_signed()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -178,7 +178,7 @@ void test_execute_form_robotomy_equal()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -200,7 +200,7 @@ void test_execute_form_robotomy_higher()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -222,7 +222,7 @@ void test_execute_form_robotomy_lower()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -242,7 +242,7 @@ void test_execute_form_robotomy_not_signed()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -264,7 +264,7 @@ void test_execute_form_presidential_equal()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -286,7 +286,7 @@ void test_execute_form_presidential_higher()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -308,7 +308,7 @@ void test_execute_form_presidential_lower()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
@@ -328,7 +328,7 @@ void test_execute_form_presidential_not_signed()
         std::cout << "Exec Bureaucrat :" << std::endl << b << std::endl;
         std::cout << "form before executing: " << std::endl << *f << std::endl;
         b.executeForm(*f);
-        free(f);
+        delete f;
     }
     catch(const std::exception& e)
     {
