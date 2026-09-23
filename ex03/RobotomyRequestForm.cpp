@@ -2,12 +2,12 @@
 
 
 RobotomyRequestForm::RobotomyRequestForm():
-AForm("roboto my request form", false, 72, 45)
+AForm("robotomy request form", false, 72, 45)
 {
 
 }
 RobotomyRequestForm::RobotomyRequestForm(std::string target):
-AForm("roboto my request form", false, 72, 45),
+AForm("robotomy request form", false, 72, 45),
 _target(target)
 {
 
